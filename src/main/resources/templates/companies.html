@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Компании перевозчиков</title>
+
+</head>
+<body>
+<h1>Компании перевозчиков по направлению <span th:text="${route}"></span></h1>
+<div id="companies">
+    <p th:each="company : ${companies}" th:text="'Компания ' + ${company.company} + ' предлагает доставку по направлению ' + ${company.name}"></p>
+</div>
+</body>
+</html>

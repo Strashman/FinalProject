@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ставки на маршруты контейнерных перевозок</title>
+
+</head>
+<body>
+<h1>Список направлений перевозок</h1>
+<table>
+    <tr>
+        <th>Направление</th>
+    </tr>
+    <tr th:each="route : ${routes}">
+        <td>
+            <a th:href="@{/companies(route=${route.name})}" th:text="${route.name}">Направление</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
