@@ -7,6 +7,14 @@
 </head>
 <body>
 <h1>Список направлений перевозок</h1>
+<form action="#" th:action="@{/routes}" method="get">
+    <select name="city">
+        <option value="Санкт-Петербург">Санкт-Петербург</option>
+        <option value="Владивосток">Владивосток</option>
+        <option value="Новороссийск">Новороссийск</option>
+    </select>
+    <input type="submit" value="Фильтровать">
+</form>
 <table>
     <tr>
         <th>Направление</th>

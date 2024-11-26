@@ -6,7 +6,17 @@
 
 </head>
 <body>
-<h1>Компании перевозчиков по направлению <span th:text="${route}"></span></h1>
+<h1>Компании перевозчиков</h1>
+
+<h2>Фильтр по городам:</h2>
+<div id="filters">
+    <a th:href="@{/companies(city='')}" th:text="'Все города'"></a>
+    <a th:each="city : ${cities}"
+       th:href="@{/companies(city=${city})}"
+       th:text="${city}"></a>
+</div>
+
+<h2>Компании:</h2>
 <div id="companies">
     <p th:each="company : ${companies}" th:text="'Компания ' + ${company.company} + ' предлагает доставку по направлению ' + ${company.name}"></p>
 </div>
